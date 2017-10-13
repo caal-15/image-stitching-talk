@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body {
+  font-family: 'Yanone Kaffeesatz';
+  color: #aaa;
+}
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+  color: white
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  transition: all 250ms ease;
+  color: #00b9f1;
+}
+
+strong {
+  color: white;
+}
+
+em {
+  color: #00b9f1;
+}
+
+.alt-link a {
+  color: #f92672;
+}
+
+a:hover {
+  color: #777;
+}
+
+img {
+  width: 40%;
+  margin: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.remark-slide-content {
+  background-color: #111;
+}
+
+.footnote {
+  position: fixed;
+  bottom: 15px;
+  left: 30px;
+  font-size: 18px;
+}
+
+.big {
+  font-size: 30px;
+}
+
+.mid-paragraph {
+  margin-top: 18%;
+}
+
+.centering {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+.remark-code {
+  font-size: 30px
+}
+
+img {
+  width: 100%
+}
