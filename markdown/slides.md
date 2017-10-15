@@ -152,6 +152,13 @@ def match_keypts(self, data_a, data_b, ratio):
 ---
 class: left, middle
 
+### __Ejemplo__: Detección y Correspondencia de Puntos
+
+![Detection a matching](img/MatchingPoints.jpg)
+
+---
+class: left, middle
+
 # Paso 4: _Juntando todo, la Homografía_
 ```python
 def stitch(self, img_a, img_b, ratio, thresh):
@@ -166,9 +173,24 @@ def stitch(self, img_a, img_b, ratio, thresh):
 ---
 class: left, middle
 
+### __Ejemplo:__ Cambio de Perspectiva con Homografías
+
+![Warp Perspective](img/picture.jpg)
+
+---
+class: left, middle
+
+### __Ejemplo:__ Cambio de Perspectiva con Homografías
+
+![Warp Perspective](img/transplaned.png)
+
+---
+class: left, middle
+
 # Paso 4b: _Cambia la Perspectiva!_
 ```python
 def stitch(self, img_a, img_b, ratio, thresh):
+  ...
   new_dims = (
     img_a.shape[1] + img_b.shape[1],
     img_a.shape[0])
