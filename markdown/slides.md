@@ -206,7 +206,7 @@ def stitch(self, img_a, img_b, ratio, thresh):
 ---
 class: left, middle
 
-# Paso 5: _Tómate una Cerveza!_
+# Paso 4: _Tómate una Cerveza!_
 
 ## Una bien _fría_, te lo mereces.
 
