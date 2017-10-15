@@ -40,7 +40,7 @@ class: left middle
 * Herramientas básicas para _cargar, escribir, y mostrar imágenes_.
 * Herramientas básicas de manejo de imágenes (por ej. _conversión a escala de grises_).
 * _Detección de Puntos Clave_ (__Harris__, __SIFT__, __SURF__).
-* _Matching de Puntos Clave_ (__Knn__, __Flann__).
+* _Correspondencias entre Puntos Clave_ (__Knn__, __Flann__).
 * Estimación de _Homografías_ y cambio de _perspectiva_.
 * Herramientas para _detección de objetos_.
 * Herramientas para _detección de movimientos_.
@@ -70,7 +70,7 @@ class: left, middle
 # ¿Qué vamos a hacer?
 
 .big[
-Vamos a _coser_ (stitch) dos imágenes para lograr un efecto de imagen _panorámica_, usando _Detección y Matching de Puntos Clave_, _Homografías_ y _Cambio de Perspectiva_!
+Vamos a _coser_ (stitch) dos imágenes para lograr un efecto de imagen _panorámica_, usando _Detección y Correspondencias entre Puntos Clave_, _Homografías_ y _Cambio de Perspectiva_!
 ]
 
 .footnote[.alt-link[[Implementación original](https://www.pyimagesearch.com/2016/01/11/opencv-panorama-stitching/)]]
@@ -108,7 +108,7 @@ def find_keypts_and_feats(self, img):
 ---
 class: left, middle
 
-# Paso 3a: _Matching de Puntos Clave_
+# Paso 2a: _Correspondencias entre los Puntos_
 ```python
 def match_keypts(self, data_a, data_b, ratio):
   matcher = cv2.DescriptorMatcher_create(
@@ -120,7 +120,7 @@ def match_keypts(self, data_a, data_b, ratio):
 ---
 class: left, middle
 
-# Paso 3b: _Removiendo con Lowe_
+# Paso 2b: _Removiendo con Lowe_
 ```python
 def match_keypts(self, data_a, data_b, ratio):
   ...
@@ -136,7 +136,7 @@ def match_keypts(self, data_a, data_b, ratio):
 ---
 class: left, middle
 
-# Paso 3c: _Limpiando un poco_
+# Paso 2c: _Limpiando un poco_
 ```python
 def match_keypts(self, data_a, data_b, ratio):
   ...
@@ -152,14 +152,14 @@ def match_keypts(self, data_a, data_b, ratio):
 ---
 class: left, middle
 
-### __Ejemplo__: Detección y Correspondencia de Puntos
+### __Ejemplo__: Detección y Correspondencias entre Puntos
 
 ![Detection a matching](img/MatchingPoints.jpg)
 
 ---
 class: left, middle
 
-# Paso 4: _Juntando todo, la Homografía_
+# Paso 3a: _Juntando todo, la Homografía_
 ```python
 def stitch(self, img_a, img_b, ratio, thresh):
   data_a = self.find_keypts_and_feats(img_a)
@@ -187,7 +187,7 @@ class: left, middle
 ---
 class: left, middle
 
-# Paso 4b: _Cambia la Perspectiva!_
+# Paso 3b: _Cambia la Perspectiva!_
 ```python
 def stitch(self, img_a, img_b, ratio, thresh):
   ...
